@@ -1,0 +1,259 @@
+<html>
+
+    <head>
+        <title>Basic | RSD</title>
+         <meta name="description" content="This is a Dashboard for Razer Security">
+         <link rel="icon" type="image/png" href="/src/img/rbd.png"/>
+         <link rel="stylesheet" href="/src/css/main.css" >
+
+        <div id="navbar"></div>
+    </head>
+    <a href="/src/dashboard/login.html" class="mainloginbutton">Log in</a>
+
+        <body class="background">
+            <h2 class="basicname">Basic</h2>
+
+            <!--Start Of General-->
+<div class="basic1">
+<h2 >General</h2>
+<form role="form" action="/manage/basic.html/" method="POST">
+    <div class="box-body">
+        <div class="form-group">
+            <label>Prefix</label>
+            <input type="text" name="prefix" class="form-control" placeholder="!">
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                <label>
+                    
+                        <input type="checkbox" name="flag_translation">Flag Translation
+                    
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="checkbox">
+                <label>
+                        <input type="checkbox" name="invite_tracking">Invite Tracking
+                    
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="box-footer">
+        <button type="submit" name="basicUpdate" class="btn btn-primary">Update</button>
+    </div>
+</form>
+
+
+
+
+</div>
+</div>     
+<!--End Of General-->
+<!--Start Of Ticket-->
+<div class="basic4">
+<h2 >Ticket</h2>
+<form role="form" action="/manage/basic.html/" method="POST">
+  <div class="box-body">
+     <div class="form-group">
+        <label>Ticket</label>
+          <input type="number" name="Ticket" class="form-control" placeholder="10">
+    </div>
+    <div class="form-group">
+        <label>Ticket Logs</label>
+        <select class="form-control" name="channel">
+            
+                <option selected="selected">No channel</option>
+ 
+            
+        </select>
+    </div>
+</div>
+                    <div class="box-footer">
+                        <button type="submit" name="basicUpdate" class="btn btn-primary">Update</button>
+                    </div>
+                </form>
+                
+                
+                
+                
+                </div>
+                </div>     
+<!--End Of Ticket-->
+    <!--Start Of Auto Mod-->
+
+    <div class="basic5">
+        <h2>Auto Moderation</h2>
+        <form role="form" action="/manage/basic.html/" method="POST">
+            <div class="box-body">
+                <div class="form-group">
+                    <label>Max Strikes</label>
+                      <input type="number" name="Max_Strikes" class="form-control" placeholder="3">
+                </div>
+                <div class="form-group">
+                    <label>Max Strikes Action</label>
+                    <select class="form-control" name="automod_action">
+                        <option selected="selected">TIMEOUT</option>
+                        
+                        
+                            <option>KICK</option>
+                        
+                        
+                            <option>BAN</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Max Lines</label>
+                      <input type="number" name="Max_Strikes" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            
+                                <input type="checkbox" name="anti_attachments" checked>Anti Attachments
+                            
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            
+                                <input type="checkbox" name="anti_invites" checked>Anti Invites
+                            
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            
+                                <input type="checkbox" name="anti_links" checked>Anti Links
+                            
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            
+                                <input type="checkbox" name="anti_spam" checked>Anti Spam
+                            
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            
+                                <input type="checkbox" name="anti_ghostping" checked>Anti Ghostping
+                            
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            
+                                <input type="checkbox" name="anti_massmention" checked>Anti Massmention
+                            
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Whitelisted Channels</label>
+                    <select class="form-control" name="channels" multiple>
+    
+                                <option>No Channel</option>
+      
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="box-footer">
+                <button type="submit" name="basicUpdate" class="btn btn-primary">Update</button>
+            </div>
+        </form>
+        </div>
+        <!--End Of Auto mod-->
+<!--Start Of Moderation-->
+<div class="basic2">
+    <h2>Moderation</h2>
+    <form role="form" action="/manage/basic.html/" method="POST">
+        <div class="box-body">
+            <div class="form-group">
+                <label>Max Warnings</label>
+                <input type="text" name="maxwarning" class="form-control" placeholder="5">
+            </div>
+            <div class="form-group">
+                <label>Max Warnings Action</label>
+                <select class="form-control" name="max_warn_action">
+                    <option selected="selected">KICK</option>
+                    
+                        <option>TIMEOUT</option>
+                    
+                    
+                    
+                        <option>BAN</option>
+                    
+                </select>
+            
+            </div>
+            <div class="form-group">
+                <label>Moderation Logs</label>
+                <select class="form-control" name="channel">
+                    
+                    <option selected="selected">No channel</option>
+
+                    
+                </select>
+            </div>
+        
+        <div class="box-footer">
+            <button type="submit" name="basicUpdate" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+    </div>
+
+ <!--End Of Moderation-->
+   <!--Start Of Statistics-->
+
+<div class="basic3">
+    <h2>Statistics</h2>
+    <form role="form" action="/manage/basic.html/" method="POST">
+        <div class="box-body">
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        
+                            <input type="checkbox" name="Tracking">Tracking
+                        
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Levelup Message</label>
+                <input type="text" name="levelup_mesage" class="form-control" placeholder=""></in>
+            </div>
+            <div class="form-group">
+                <label>LevelUp Channel</label>
+                <select class="form-control" name="channel">
+                    
+                        <option selected="selected">No channel</option>
+         
+                    
+                </select>
+            </div>
+        </div>
+        <div class="box-footer">
+            <button type="submit" name="basicUpdate" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+    </div>
+    <!--End Of Statistics-->
+    </body>
+</html>
+		  
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script> 
+          $(function(){
+            $("#navbar").load("/src/includes/navbar.html"); 
+        });
+        </script> 
+

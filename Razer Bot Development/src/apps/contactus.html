@@ -1,0 +1,97 @@
+<html>
+  <head>
+</script>
+    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/css/style.css" rel="stylesheet">
+    <link href="/src/css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/src/img/rbd.png" type="image/x-icon">
+    <title>Staff | RS</title>
+</head>
+
+  <body class="background">
+<div id="navbar"></div>
+<h1 class="contactusname">Contact US</h1>
+<p class="required">* Required</p>    
+<form class="contactus" onsubmit="sendContact(event)">
+  <!--Start of Name-->
+  <div class="mb-3">
+    <label for="nameinput" class="form-label"><strong>Full Name: <a style="color: red;">*</a></strong></label>
+    <input type="text" class="form-control" id="nameinput" placeholder="Your answer" required>
+  </div>
+  <!--End of Name-->
+  <!--Start of Emaill-->
+      <div class="mb-3">
+        <label for="emailInput" class="form-label"><strong>Email: <a style="color: red;">*</a></strong></label>
+        <input type="email" class="form-control" id="emailInput" placeholder="Your answer" required>
+      </div>
+       <!--End of Emaill-->
+      <!--Start of message-->
+      <div class="mb-3">
+        <label for="messageinput" class="form-label"><strong>Message: <a style="color: red;">*</a></strong></label>
+          <textarea type="text" class="form-control" id="messageinput" rows="3" placeholder="Your answer"></textarea>
+      </div>
+      <!--End of message-->
+
+      <button  type="submit" class="appbutton">Submit</button>
+    </form>
+    <script>
+      async function sendContact(ev) {
+        ev.preventDefault();
+
+        const senderEmail = document
+          .getElementById('emailInput').value;
+          const name = document
+          .getElementById('nameinput').value;
+          const message = document
+          .getElementById('messageinput').value;
+        const webhookBody = {  
+          embeds: [{
+            title: 'NEW CONTACT',
+            fields: [
+            { name: 'Full Name:', value: name},
+            { name: 'Email:', value: senderEmail},
+            { name: 'Message:', value: message},
+            ]
+          }],
+        };
+
+        const webhookUrl = 'https://discord.com/api/webhooks/1083127285546238035/06jKOTSQb1sRbDcyHnAwqn2ar-zuyxu0SZp6w58rYIDeaiypoeffjnFeyBRpI1YntzZy';
+
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookBody),
+        });
+
+        if (response.ok) {
+            alert('Your Contact form was sent to the staff team')
+        } else {
+          alert('There was an error!');
+        }
+      }
+    </script>
+
+  </body>
+
+  <script src="/src/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+  <div id="footer"></div>
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+  </script>
+   <script> 
+      $(function(){
+    $("#navbar").load("/src/includes/mainavbar.html"); 
+    $("#footer").load("/src/includes/footer.html"); 
+    });
+    </script> 
+</html>

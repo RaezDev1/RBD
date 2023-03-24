@@ -1,0 +1,515 @@
+:root {
+	--text-color: white;
+  --descreption-color: rgb(207, 207, 207);
+	--main-color: #4856ee;
+	--seacondry-color: #626ffd;
+	--discord-color: #5865f2;
+	--command-background-main-color: #212529;
+	--card-background: rgb(49,51,56);
+}
+
+/*Start of Bckground*/
+.background {
+  background-color: #313338;
+}
+/*End of Bckground*/
+/*Start of custom scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+    color: #ffffff;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #212529;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #3f4042;
+    border-radius: 28px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+  }
+  
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(219, 219, 219);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(219, 219, 219);
+  }
+  
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(219, 219, 219);
+  }
+/*End of custom scrollbar*/
+/*Start of NavBar*/
+.row.content {height: 550px}
+  .sidenav {
+      background-color: #313338;
+      height: 100%;
+      position: fixed; 
+    }
+@media screen and (max-width: 767px) {
+  .row.content {height: auto;} 
+      
+    }
+.rsd_name {
+      text-align: center;
+      color: var(--text-color);
+    }
+/*End of NavBar*/
+/*Start of Credits */
+.raezdev {
+    display: flex;
+    min-height: 52px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8px 16px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+    color: var(--text-color);  
+  }
+.raezdevn {
+    color: red;
+}
+/*End of Credits*/
+/*Start of login*/
+#info {
+  font-size: 20px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.login:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.loginbutton {
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-align: center;
+  width: fit-content;
+  float: right;
+  margin-top: -15px;
+  background-color: #383A40; 
+  border: none;
+  color: var(--text-color);
+  border-radius: 22px;
+}
+/*End of login*/
+/*Start of login button*/
+.mainloginbutton {
+  padding: 8px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin: -7px 5px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-align: center;
+  width: fit-content;
+  float: right;
+  margin-top: -540px;
+  background-color: #383A40; 
+  border: none;
+  color: var(--text-color);
+  border-radius: 22px;
+}
+.mainloginbutton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*End of login button*/
+/*Start of Basic*/
+.basic1 {
+    background-color: #313338;
+      text-align: left;
+      margin-top: -20px; 
+      margin-left: 100px;
+      color: var(--text-color);
+      display: flex;
+      min-height: 52px;
+      flex-direction: column;
+      align-items: left;
+      justify-content: left;
+      overflow: hidden;
+      padding: 8px 16px;
+      border-radius: 22px;
+      border-style: double;
+      border-color: white;
+      border-width: 1.5px;
+      width: 500px;
+    }
+.basic2 {
+      background-color: #313338;
+      text-align: left;
+      float: right;
+      margin-top: -900px;
+      color: var(--text-color);
+      display: flex;
+      min-height: 52px;
+      flex-direction: column;
+      align-items: left;
+      justify-content: left;
+      overflow: hidden;
+      padding: 8px 16px;
+      border-radius: 22px;
+      border-style: double;
+      border-color: white;
+      border-width: 1.5px;
+      width: 500px;
+    }
+
+.basic4 {
+  background-color: #313338;
+  text-align: left;
+  margin-top: 140px; 
+  float: right;
+  color: var(--text-color);
+  display: flex;
+  min-height: 52px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  overflow: hidden;
+  padding: 8px 16px;
+  border-radius: 22px;
+  border-style: double;
+  border-color: white;
+  border-width: 1.5px;
+  width: 500px;
+}
+.basic5 {
+  background-color: #313338;
+  text-align: left;
+  margin-top: 10px; 
+  margin-left: 400px;
+  color: var(--text-color);
+  display: flex;
+  min-height: 52px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  overflow: hidden;
+  padding: 8px 16px;
+  border-radius: 22px;
+  border-style: double;
+  border-color: white;
+  border-width: 1.5px;
+  width: 500px;
+}
+.basicname {
+  color: var(--text-color);
+  text-align: left;
+  margin-top: -540px; 
+  margin-left: -400px;
+  display: flex;
+  min-height: 52px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  overflow: hidden; 
+}
+/*End of Basic*/
+/*Start of Greeting*/
+.greeting1 {
+  background-color: #313338;
+  text-align: left;
+  margin-top: -20px; 
+  margin-left: -200px;
+  color: var(--text-color);
+  display: flex;
+  min-height: 52px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  overflow: hidden;
+  padding: 8px 16px;
+  border-radius: 22px;
+  border-style: double;
+  border-color: white;
+  border-width: 1.5px;
+  width: 500px;
+}
+.greeting2 {
+  background-color: #313338;
+  text-align: left;
+  margin-top: -610px ;
+  margin-left: 980px;
+  color: var(--text-color);
+  display: flex;
+  min-height: 52px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  overflow: hidden;
+  padding: 8px 16px;
+  border-radius: 22px;
+  border-style: double;
+  border-color: white;
+  border-width: 1.5px;
+  width: 500px;
+}
+.greetingname {
+  color: var(--text-color);
+  text-align: left;
+  margin-top: -540px; 
+  margin-left: -400px;
+  display: flex;
+  min-height: 52px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  overflow: hidden;
+}
+/*End of Greeting*/
+/*Start of Selector*/
+.Selectorname {
+  color: var(--text-color);
+  text-align: left;
+  margin-top: -540px; 
+  margin-left: -400px;
+  display: flex;
+  min-height: 52px;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  overflow: hidden;
+}
+/*End of Selector*/
+/*Start of 404 error page*/
+.pagewasnotfound {
+  text-align: center;
+  color: var(--text-color);
+}
+.pagewasnotfoundmaintext {
+  text-align: center;
+  color: var(--text-color);
+}
+.pagewasnotfoundbutton1 {
+  text-align: center;
+  padding: 8px 32px;
+  margin-left: 750px;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  width: fit-content;
+  background-color: #383A40; 
+  border: none;
+  color: var(--text-color);
+  border-radius: 22px;
+}
+/*End of 404 error page*/
+/*Start of report page*/
+.report {  
+  text-align: center;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 8px 16px;
+  border-radius: 22px;
+  border-style: double;
+  border-color: white;
+  border-width: 1.5px;
+}
+.reportname {
+  color: var(--text-color);
+  text-align: center;
+  }
+/*End of Report page */
+/*Start of TOS*/
+.tosname {
+  text-align: center;
+  color: var(--text-color);
+}
+.tos {
+  text-align: center;
+  color: var(--text-color);
+}
+/*End of TOS*/
+/*Start of privacy*/
+.privacyname {
+  text-align: center;
+  color: var(--text-color);
+}
+.privacy {
+text-align: center;
+color: var(--text-color);
+}
+/*End of privacy*/
+/*Start of Status*/
+.Statusname {
+  text-align: center;
+  color: var(--text-color);
+}
+.Status {
+  text-align: center;
+  color: var(--text-color);
+}
+/*End of Status*/
+/*Start of Careers*/
+.careersname {
+  text-align: center;
+  color: var(--text-color);
+}
+.careers {
+text-align: center;
+color: var(--text-color);
+}
+/*Start of Staffapp*/
+.staffappname {
+text-align: center;
+color: var(--text-color);
+}
+.staffappdesc {
+  text-align: center;
+  color: var(--text-color);
+} 
+.staffapp {
+  text-align: center;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 8px 16px;
+  border-radius: 22px;
+  border-style: double;
+  border-color: white;
+  border-width: 1.5px;
+}
+.required {
+  color: red;
+  text-align: center;
+}
+/*End of Staffapp*/
+/*Start of contactus*/
+.contactusname {
+  text-align: center;
+  color: var(--text-color);
+}
+.contactus {
+  text-align: center;
+  color: var(--text-color); 
+   display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 8px 16px;
+  border-radius: 22px;
+  border-style: double;
+  border-color: white;
+  border-width: 1.5px;
+}
+/*End of contactus*/
+/*Start of footer*/
+.footer-clean {
+  padding:50px 0;
+  color:#f8f9fa;
+}
+
+.footer-clean h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+/*End of footer*/
+/*Start of home page*/
+h5 {
+  color: var(--text-color);
+}
+.statics {
+  color: var(--text-color);
+}
+.features {
+  color: var(--text-color);
+  text-align: center;
+}
+/*End of home page*/
+/*Start of Commands page*/
+.commandbackground {
+	background: var(--command-background-main-color);
+	border-radius: 5px;
+	color: #ffffff;
+	letter-spacing: 0.5px;
+}
+.card {
+	background-color: var(--card-background);
+}
+.btn-primary {
+	text-align: left;
+	background-color: transparent;
+	border: 1px solid transparent;
+	color: #b1b1b1;
+}
+.btn-primary:hover {
+	background-color: #121b2c;
+	border: 1px solid #121b2c;
+}
+.accordion-item {
+	background-color: var(--card-background);
+	border-radius: 8px !important;
+}
+.accordion-button {
+	background-color: #2f2f30 !important;
+	color: #ffffff !important;
+	border-radius: 8px !important;
+}
+.command-descreption {
+	color: #bdbdbd;
+}
+.examples {
+	color: #8b8b8b;
+}
+/*End of Command page*/
+/*Start of app button*/
+.appbutton {
+  padding: 8px 32px;
+  text-align: center;
+  display: flex;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-align: center;
+  width: fit-content;
+  float: right;
+  background-color: #383A40; 
+  border: none;
+  color: var(--text-color);
+  border-radius: 22px;
+}
+.appbutton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/*End of app button*/

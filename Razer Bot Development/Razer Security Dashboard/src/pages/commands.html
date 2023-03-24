@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/css/main.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="shortcut icon" href="/src/img/rbd.png" type="image/x-icon">
+    <title>Commands | RS</title>
+</head>
+
+<body class="commandbackground" >
+
+    <div id="navbar"></div>
+
+
+    <div class="container">
+        <section style="margin-top: 9%;">
+            <div class="row">
+                <div class="col-sm-6 my-1">
+                    <h2 class="fw-bold">Razer Security Commands</h2>
+                    <p class="command-descreption">Find all Razer Security commands and information you need fast and easy</p>
+                </div>
+
+            </div>
+            <hr>
+        </section>
+        <div class="mt-4"></div>
+        <div class="row">
+            <div class="col-md-4 my-2">
+                <div class="card p-3">
+                    <h5>Select Commands Category</h5>
+                    <hr/>
+                    <button onclick="active(this)" id="CategoryBtnAll" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><ion-icon name="pricetag-outline"></ion-icon>&nbsp; All Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn0" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><ion-icon name="earth-outline"></ion-icon>&nbsp; Utility Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><ion-icon name="hammer-outline"></ion-icon>&nbsp; Moderation Commands</button>
+                    <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><ion-icon name="musical-notes-outline"></ion-icon>&nbsp; Music Commands</button>
+
+                </div>
+            </div>
+            
+            <div class="col-md-8 my-2">
+
+                        <div class="mt-4"></div>
+                    
+                    <div class="commands-section" id="Category0">
+                        
+                            
+                            <div class="accordion accordion-flush mt-2" id="help">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fhelp">
+                                             help&nbsp; <span class="command-descreption">- help menu that have all the commands</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fhelp" class="accordion-collapse collapse" data-bs-parent="#help">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    !help<br>/help
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                    
+                            <div class="commands-section" id="Category1">
+                        
+                            
+                                <div class="accordion accordion-flush mt-2" id="ban">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fban">
+                                                 ban&nbsp; <span class="command-descreption">- ban a member from your server </span>
+                                            </button>
+                                        </h2>
+                                        <div id="fban" class="accordion-collapse collapse" data-bs-parent="#ban">
+                                            <div class="accordion-body">
+                                                <span>Usage Examples:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                        /ban<br>!ban 
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                
+                                <div class="accordion accordion-flush mt-2" id="kick">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkick">
+                                                 kick&nbsp; <span class="command-descreption">- Kick someone from your server</span>
+                                            </button>
+                                        </h2>
+                                        <div id="fkick" class="accordion-collapse collapse" data-bs-parent="#kick">
+                                            <div class="accordion-body">
+                                                <span>Usage Examples:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                        /kick<br>!kick
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="commands-section" id="Category2">
+                        
+                            
+                                <div class="accordion accordion-flush mt-2" id="play">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fplay">
+                                                 play&nbsp; <span class="command-descreption">- play a song</span>
+                                            </button>
+                                        </h2>
+                                        <div id="fplay" class="accordion-collapse collapse" data-bs-parent="#play">
+                                            <div class="accordion-body">
+                                                <span>Usage Examples:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                        /play<br>!play 
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                
+                                <div class="accordion accordion-flush mt-2" id="pause">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fpause">
+                                                 pause&nbsp; <span class="command-descreption">- Pause the song you are on</span>
+                                            </button>
+                                        </h2>
+                                        <div id="fpause" class="accordion-collapse collapse" data-bs-parent="#pause">
+                                            <div class="accordion-body">
+                                                <span>Usage Examples:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                        /pause <br>!pause
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="footer"></div>
+                            <script
+                                src="https://code.jquery.com/jquery-3.3.1.js"
+                                integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+                                crossorigin="anonymous">
+                            </script>
+                         <script> 
+                            $(function(){
+                          $("#navbar").load("/src/includes/mainavbar.html"); 
+                          $("#footer").load("/src/includes/footer.html"); 
+                          });
+                          </script> 
+        
+
+    <script>
+        function active(elm){
+            document.getElementById("CategoryBtnAll").classList.remove("active");
+            
+                document.getElementById("CategoryBtn0").classList.remove("active");
+                document.getElementById("Category0").setAttribute("hidden", "");
+                document.getElementById("CategoryBtn1").classList.remove("active");
+                document.getElementById("Category1").setAttribute("hidden", "");
+                document.getElementById("CategoryBtn2").classList.remove("active");
+                document.getElementById("Category2").setAttribute("hidden", "");
+            elm.classList.add("active");
+            if(elm.id.replace("CategoryBtn", "") == "All"){
+                
+                    document.getElementById("Category0").removeAttribute("hidden");
+                    document.getElementById("Category1").removeAttribute("hidden");
+                    document.getElementById("Category2").removeAttribute("hidden");
+
+				
+                
+            }else{
+                document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
+            }
+        }
+        document.getElementById("CategoryBtnAll").click();
+    </script>
+
+    <script src="/src/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

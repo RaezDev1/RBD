@@ -1,0 +1,128 @@
+<html>
+  <head>
+</script>
+    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/css/style.css" rel="stylesheet">
+    <link href="/src/css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/src/img/rbd.png" type="image/x-icon">
+    <title>Staff | RS</title>
+</head>
+
+  <body class="background">
+    <div id="navbar"></div>
+    <h1 class="staffappname">Staff</h1>
+<p class="staffappdesc">Feeling like being a part of the staff team? Well you have come to the right place, please keep in mind staff will have training, if you get approved you will get an email about the time and date of the training. Please also note that you must be 18+ to apply. Under age? No issue we can work something out just fill out the contact form.</p>
+<p class="required">* Required</p>    
+<form class="staffapp" onsubmit="sendContact(event)">
+  <!--Start of Name-->
+  <div class="mb-3">
+    <label for="nameinput" class="form-label"><strong>Full Name: <a style="color: red;">*</a></strong><br>
+      First and last name</label>
+    <input type="text" class="form-control" id="nameinput" placeholder="Your answer" required>
+  </div>
+  <!--End of Name-->
+  <!--Start of Emaill-->
+      <div class="mb-3">
+        <label for="emailInput" class="form-label"><strong>Email: <a style="color: red;">*</a></strong></label>
+        <input type="email" class="form-control" id="emailInput" placeholder="Your answer" required>
+      </div>
+       <!--End of Emaill-->
+      <!--Start of Postion-->
+      <div class="mb-3">
+        <p><strong>Which position are you interested in? <a style="color: red;">*</a></strong></p>
+        <select class="form-control" id="positioninput" required>
+                <option value="Support Team">Support Team</option>
+                <option value="Investigation Team">Investigation Team</option>
+                <option value="Moderation Team">Moderation Team</option>
+                <option value="Software Team">Software Team</option>
+                <option value="Marketing Team">Marketing Team</option>
+                <option value="FiveM Livery Designer">FiveM Livery Designer</option>
+
+          
+        </select>
+    </div>
+      <!--End of Postion-->
+      <!--Start of why should we accept you-->
+      <div class="mb-3">
+        <label for="acceptyouoveranyoneelseinput" class="form-label"><strong>Why Should We accept you over anyone else? <a style="color: red;">*</a></strong><br>
+          MUST be 5+ sentences or we will decline it</label>
+        <textarea type="text" class="form-control" id="acceptyouoveranyoneelseinput" rows="3" placeholder="Your answer"></textarea>
+      </div>
+      <!--End of why should we accept you-->
+      <!--Start of about yourself-->
+      <div class="mb-3">
+        <label for="aboutyourselfinput" class="form-label"><strong>Tell Us about yourself: <a style="color: red;">*</a></strong><br>
+          You can not use oh well I know TintedVoid etcetc. Must also be 7+ sentences</label>
+          <textarea type="text" class="form-control" id="aboutyourselfinput" rows="3" placeholder="Your answer"></textarea>
+      </div>
+      <!--End of about yourself-->
+
+      <button  type="submit" class="appbutton">Submit</button>
+    </form>
+    <script>
+      async function sendContact(ev) {
+        ev.preventDefault();
+
+        const senderEmail = document
+          .getElementById('emailInput').value;
+          const position = document
+          .getElementById('positioninput').value;
+          const name = document
+          .getElementById('nameinput').value;
+          const acceptyouoveranyoneelse = document
+          .getElementById('aboutyourselfinput').value;
+          const aboutyou = document
+          .getElementById('aboutyourselfinput').value;
+        const webhookBody = {  
+          embeds: [{
+            title: 'NEW STAFF',
+            fields: [
+            { name: 'Full Name:', value: name},
+            { name: 'Email:', value: senderEmail},
+            { name: 'Which position are you interested in?', value: position},
+            { name: 'Why Should We accept you over anyone else?', value: acceptyouoveranyoneelse},
+            { name: 'Tell Us about yourself:', value: aboutyou},
+            ]
+          }],
+        };
+
+        const webhookUrl = 'https://discord.com/api/webhooks/1083103078905028688/5Da2EErP7W0Nr82BLNiwPeQudQAONcY6YrnVUpDK5lb69q6ZbOvHw0wdjQLjv-hI0GtV';
+
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookBody),
+        });
+
+        if (response.ok) {
+          alert('Congratulations \nStaff Applications take a bit to go thought so please be patient as we view your app.')
+        } else {
+          alert('There was an error!');
+        }
+      }
+    </script>
+
+  </body>
+
+  <script src="/src/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+  <div id="footer"></div>
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+  </script>
+   <script> 
+      $(function(){
+    $("#navbar").load("/src/includes/mainavbar.html"); 
+    $("#footer").load("/src/includes/footer.html"); 
+    });
+    </script> 
+</html>

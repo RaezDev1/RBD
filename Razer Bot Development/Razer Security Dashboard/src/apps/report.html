@@ -1,0 +1,125 @@
+<html>
+  <head>
+</script>
+    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/css/style.css" rel="stylesheet">
+    <link href="/src/css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/src/img/rbd.png" type="image/x-icon">
+    <title>Report | RS</title>
+</head>
+
+  <body class="background">
+    <div id="navbar"></div>
+
+    <h1 class="reportname">Report User</h1>
+    <p class="required">* Required</p>    
+
+    <form class="report" onsubmit="sendContact(event)">
+      <div class="mb-3">
+        <label for="emailInput" class="form-label"><strong>Email: <a style="color: red;">*</a></strong></label>
+        <input type="email" class="form-control" id="emailInput" placeholder="Your answer" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="useridinput" class="form-label"><strong>User ID: <a style="color: red;">*</a></strong></label>
+        <input  type="number" class="form-control" id="useridinput" placeholder="Your answer" required></input>
+      </div>
+      <div class="mb-3">
+        <label for="reportuseridinput" class="form-label"><strong>Report User ID: <a style="color: red;">*</a></strong></label>
+        <input  type="number" class="form-control" id="reportuseridinput" placeholder="Your answer" required></input>
+      </div>
+      <div class="mb-3">
+        <label for="messageInput" class="form-label"><strong>Message: <a style="color: red;">*</a></strong></label>
+        <textarea type="text" class="form-control" id="messageInput" rows="3" placeholder="Your answer" required></textarea>
+      </div>
+      <div class="mb-3">
+        <p><strong>Reason: <a style="color: red;">*</a></strong></p>
+        <select class="form-control" id="reasoninput" required>
+                <option value="Direct Message Advertising">Direct Message Advertising</option>
+                <option value="Terms of Service Violation">Terms of Service Violation</option>
+                <option value="Problematic Bot">Problematic Bot</option>
+                <option value="Doxxing">Doxxing</option>
+                <option value="Raids and Nuking">Raids and Nuking</option>
+                <option value="Underage in NSFW">Underage in NSFW</option>
+                <option value="Excessive Harassament">Excessive Harassament</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="proofinput" class="form-label"><strong>Proof: <a style="color: red;">*</a></strong></label>
+        <input  type="text" class="form-control" id="proofinput" placeholder="Your answer" required></input>
+      </div>
+      <button  type="submit" class="appbutton">Submit</button>
+    </form>
+    <script>
+      async function sendContact(ev) {
+        ev.preventDefault();
+
+        const senderEmail = document
+          .getElementById('emailInput').value;
+        const senderMessage = document
+          .getElementById('messageInput').value;
+          const senderid = document
+          .getElementById('useridinput').value;
+          const reason = document
+          .getElementById('reasoninput').value;
+          const proof = document
+          .getElementById('proofinput').value;
+          const reportuserid = document
+          .getElementById('reportuseridinput').value;
+        const webhookBody = {
+          embeds: [{
+            title: 'NEW REPORT',
+            fields: [
+              { name: 'Email:', value: senderEmail},
+              { name: 'User ID:', value: senderid},
+              { name: 'Report User ID:', value: reportuserid},
+              { name: 'Message:', value: senderMessage},
+              { name: 'Reason:', value: reason},
+              { name: 'Proof:', value: proof},
+            ]
+          }],
+        };
+
+        const webhookUrl = 'https://discord.com/api/webhooks/1083503371949973504/IRblE5hdTP_7t2JvLOlTF4Ry-Rqm4YLVEBfegzXNXoTzMHpBCLz2NImhuK2hxc9CKLIl';
+
+        const response = await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookBody),
+
+        });
+
+        if (response.ok) {
+          senderEmail
+          alert('Your report was sent to the RS Staff team!');
+        } else {
+          alert('There was an error! Please make a ticket in RS support server https://discord.gg/2rQzF6mUbK');
+        }
+      }
+    </script>
+
+  </body>
+
+  <script src="/src/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+  <div id="footer"></div>
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+  </script>
+   <script> 
+      $(function(){
+    $("#navbar").load("/src/includes/mainavbar.html"); 
+    $("#footer").load("/src/includes/footer.html"); 
+    });
+    </script> 
+</html>
