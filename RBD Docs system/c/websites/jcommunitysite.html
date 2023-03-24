@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCommunitySite | RBD</title>
+    <link href="/src/css/main.css" rel="stylesheet">
+    <div id="navbar"></div>
+    <div class="sidenav">
+      <a href="/c/websites/">Websites</a>
+      <a href="/c/websites/jcommunitysite.html">JCommunitySite</a>
+    </div>
+</head>
+
+<body class="background main">
+    <h2 class="jcs">JCommunitySite</h2>
+    <hr>
+
+       <p class="in">Installing Nginx</p> 
+       <p class="test">
+        <br>
+        sudo apt update
+        <br>
+        sudo apt install nginx
+        <br>
+        <br>
+       </p>
+    <p class="in">Installing Node.Js</p>
+         <p class="test">
+          <br>
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash<br>
+        nvm install 16.13.2
+        <br>
+        <br>
+         </p> 
+        <p class="in"> Certbot (SSL) </p>
+        <p class="test">
+          <br>
+        sudo apt install certbot python3-certbot-nginx
+        <br>
+        <br>
+        </p>
+    <p class="in"> Nginx Configuration </p>
+        <p>Using a SFTP viewer navigate to /etc/nginx/sites-available/default. This is the Nginx site configuration. Delete the contents of the default file if you haven't made changes to it before.</p>
+        <p class="test">
+          <br>
+        server {<br>
+            <br>
+          server_name  example.com; # Change domain to your domain<br>
+          <br>
+          location / {<br>
+            proxy_pass http://localhost:300; # Change the port if needed.<br>
+            proxy_http_version 1.1;<br>
+            proxy_set_header Upgrade $http_upgrade;<br>
+            proxy_set_header Connection 'upgrade';<br>
+            proxy_set_header Host $host;<br>
+            proxy_cache_bypass $http_upgrade;<br>
+            proxy_set_header X-Real-IP $remote_addr;<br>
+          }<br>
+          <br>
+          <br>
+        </p>
+        <p>Once you have made your changes save the file and restart Nginx</p>
+        <p class="test">
+          <br>
+        sudo systemctl restart nginx
+        <br>
+        Issue SSL Certificate 
+        <br>
+        sudo certbot --nginx -d example.com
+        <br>
+        sudo certbot renew --dry-run
+        <br>
+        <br>
+        </p>
+      <p>  Discord login </p>
+        <p class="test">
+          <br>
+        https://example.com/auth/discord/callback 
+        <br>
+        <br>
+        </p>
+    </p>
+    <br>
+  
+    <br>
+    <div id="footer"></div>
+    </body>
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script> 
+  $(function(){
+$("#navbar").load("/src/includes/_header.html"); 
+$("#footer").load("/src/includes/footer2.html"); 
+});
+</script> 
+</html>

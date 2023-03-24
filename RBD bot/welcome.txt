@@ -1,0 +1,12 @@
+ ## Welcome message
+@bot.event
+async def on_member_join(member):
+    channel = bot.get_channel()
+    embed=discord.Embed(title=f"Welcome {member.name}",color=0x9208ea)
+    await channel.send(embed=embed)
+ ## GoodBye message
+@bot.event
+async def on_member_remove(member):
+    channel = bot.get_channel()
+    embed=discord.Embed(title=f"GoodBye {member.name}",color=0x9208ea)
+    await channel.send(embed=embed)
